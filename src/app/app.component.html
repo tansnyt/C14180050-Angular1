@@ -1,4 +1,27 @@
-<hello name="{{ name }}"></hello>
+<!-- <hello name="{{ name }}"></hello> -->
 <p>
-  Start editing to see some magic happen :)
+	Latihan Angular 1. C14180050 - Tania Sunyoto
 </p>
+<br>
+
+<div *ngFor="let number of [0,1,2,3,4]">
+  <span *ngFor="let dot of map[number]; let i=index">
+    <a>{{dot}} </a>
+  </span>
+</div>
+<br>
+
+<ng-template *ngIf="turn; then user0; else user1;"></ng-template>
+<ng-template #user0>User 0</ng-template>
+<ng-template #user1>User 1</ng-template>
+<br>
+Baris:
+<input [(ngModel)]="baris" type="text">
+Kolom:
+<input [(ngModel)]="kolom" type="text">
+<br><br>
+<button (click)="enter()">Enter</button> 
+<br>
+<h1>{{winner}}</h1>
+
+<button (click)="reset()">Reset Game</button> 
